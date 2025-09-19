@@ -29,6 +29,13 @@ const listaTarefas = document.querySelector('#lista-tarefas');
             <button class = "excluir" onclick="ExcluirTarefa(${index})>Excluir</button>
             `
             listaTarefas.appendChild(li);
+
+    function excluirTarefa(index){
+        if (confirm('Você deseja excluir a tarefa? ')) {
+            tarefas.splice(index, 1);
+            mostrarTarefas();
+        }
+    }
         
 
         });
